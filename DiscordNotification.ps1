@@ -16,9 +16,9 @@ $OU = $($Computer.Properties.Item('distinguishedName')).Substring($($Computer.Pr
 
 
 #Sending the message
-$url = "https://discordapp.com/api/webhooks/463355360749682748/olFqzc1R8_Uo4X0duYPPpnI1Ygl7Rl3soxqw48CnyJfe_eaHedoBB7SqkvtWu7Z603wg"
+$url = "Webhook URL"
 $content = @"
-<@&463371572560920606>
+#<@&......> You can get the role ID by typing \@RoleName
 __**Task Sequence completed**__
 **Time Completed:** $DateAndTime
 **Computer Name:** $ComputerName
