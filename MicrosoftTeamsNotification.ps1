@@ -15,7 +15,7 @@ $Computer = $ADSISearcher.FindAll();
 $OU = $($Computer.Properties.Item('distinguishedName')).Substring($($Computer.Properties.Item('distinguishedName')).IndexOf('OU='))
 
 
-$uri = "Enter Webhook URL in these quotes"
+$uri = "WEBHOOK URL"
 $body = ConvertTo-JSON @{
     title ="Task Sequence Completed on $ComputerName"
     text = "`n
