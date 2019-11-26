@@ -16,7 +16,7 @@ $OU = $($Computer.Properties.Item('distinguishedName')).Substring($($Computer.Pr
 
 
 #Sending the message
-$url = "Webhook URL"
+$url = "WEBHOOK URL"
 $content = @"
 #<@&......> You can get the role ID by typing \@RoleName
 __**Task Sequence completed**__
