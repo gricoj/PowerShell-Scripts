@@ -21,16 +21,3 @@
 
  }
  
-function Update-GroupCSV {
-    param ([Parameter(Mandatory = $true)][string]$Path, [Parameter(Mandatory = $true)][string]$Header, [Parameter(Mandatory = $true)][string]$Group)
-    $UpdatedUsers = @()
-    $UpdatedUsers += (Import-Csv $Path).$Header
-    Update-Group -Group $Group -UpdatedUsers $UpdatedUsers
-    }
-
-function Update-GroupTXT {
-    param ([Parameter(Mandatory = $true)][string]$Path, [Parameter(Mandatory = $true)][string]$Group)
-    $UpdatedUsers = @()
-    $UpdatedUsers += Get-Content $Path
-    Update-Group -Group $Group -UpdatedUsers $UpdatedUsers
-    }
