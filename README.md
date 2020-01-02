@@ -17,4 +17,10 @@ Simple one-line script used to Disable/Remove Internet Explorer 11.
 
 This script was used as a step in a SCCM task sequence to remove Internet Explorer from computers running Windows 10 LTSB/LTSC, so that no internet browesers were on the computer.
 
+### [UpdatingGroup.ps1](https://github.com/gricoj/PowerShell-Scripts/blob/master/UpdatingGroup.ps1)
+Function created to simplify updating members in AD Groups. The function takes a look at the members who should have be in the group and compares them agaisnt the members who are currently in the group. 
 
+There are three scenarios:
+1. The user is currently in the group and should be in the group: No Change
+2. The user is currently in the group and should not be in the group: The user is removed from the group
+3. The user is not currently in the group and should be in the group: The user is added to the group
